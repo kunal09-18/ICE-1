@@ -1,0 +1,12 @@
+trigger:
+- main 
+
+pool:
+  name: 'Default'
+
+steps:
+- task: AzureWebAppContainer@1
+  inputs:
+    azureSubscription: 'kunal-service-connection' 
+    appName: 'kunalwebapp' 
+    containers: 'kunalregistry.azurecr.io/hello-world:latest' 
